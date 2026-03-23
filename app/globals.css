@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  background: radial-gradient(circle at 15% 12%, #d7e3fc 0%, #f3f4ef 42%, #f9f4e5 100%);
+  color: #11131a;
+  min-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.shell {
+  position: relative;
+}
+
+.shell::before {
+  content: "";
+  position: absolute;
+  inset: -6rem 0 auto;
+  height: 12rem;
+  background: linear-gradient(90deg, rgba(5, 102, 141, 0.16), rgba(0, 168, 150, 0.16));
+  filter: blur(32px);
+  z-index: -1;
+}
+
+.card-rise {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card-rise:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px -24px rgba(17, 19, 26, 0.45);
+}
