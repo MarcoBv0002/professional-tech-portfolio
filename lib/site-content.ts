@@ -35,6 +35,14 @@ export type TechItem = {
   category: "backend" | "database" | "cloud" | "devops" | "frontend";
 };
 
+export type MarketInsight = {
+  stat: string;
+  headline: string;
+  detail: string;
+  sourceLabel: string;
+  sourceUrl: string;
+};
+
 type Dictionary = {
   nav: {
     services: string;
@@ -52,6 +60,7 @@ type Dictionary = {
   };
   sections: {
     services: string;
+    opportunity: string;
     cases: string;
     credentials: string;
     stack: string;
@@ -104,6 +113,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     sections: {
       services: "Servicios ofrecidos",
+      opportunity: "Por que actuar ahora",
       cases: "Casos de impacto (anonimos)",
       credentials: "Certificaciones y formacion",
       stack: "Stack y tecnologias",
@@ -145,6 +155,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     sections: {
       services: "Service offerings",
+      opportunity: "Why act now",
       cases: "Impact case studies (anonymous)",
       credentials: "Certifications and education",
       stack: "Tech stack",
@@ -213,6 +224,65 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
       title: "Cloud and serverless architecture",
       summary:
         "Modern platform design with microservices, Lambda, and APIs to scale with lower operational friction."
+    }
+  ]
+};
+
+export const insightsByLocale: Record<Locale, MarketInsight[]> = {
+  es: [
+    {
+      stat: "99.3%",
+      headline: "Las MIPYME son el nucleo del mercado formal peruano",
+      detail:
+        "En Peru, las MIPYME representan el 99.3% de empresas formales (mas de 2.3 millones). La ventaja competitiva vendra de automatizar antes que el resto.",
+      sourceLabel: "PRODUCE OGEIEE (Estadistica MIPYME 2024)",
+      sourceUrl: "https://ogeiee.produce.gob.pe/index.php/shortcode/estadistica-oee/estadisticas-miPyme"
+    },
+    {
+      stat: "40%",
+      headline: "IA impactara una gran parte de los trabajos",
+      detail:
+        "El FMI estima que la IA afectara cerca del 40% del empleo global. Para empresas, esto exige redisenar procesos y capacitar equipos, no solo comprar herramientas.",
+      sourceLabel: "IMF (enero 2024)",
+      sourceUrl:
+        "https://meetings.imf.org/en/IMF/Home/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity"
+    },
+    {
+      stat: "86%",
+      headline: "Los empleadores ya esperan transformacion por IA",
+      detail:
+        "El WEF reporta que 86% de empleadores espera que la IA transforme su negocio hacia 2030. Esperar suele costar mas que ejecutar una adopcion gradual hoy.",
+      sourceLabel: "WEF Future of Jobs Report 2025",
+      sourceUrl:
+        "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/1-drivers-of-labour-market-transformation/"
+    }
+  ],
+  en: [
+    {
+      stat: "99.3%",
+      headline: "SMEs dominate Peru's formal business landscape",
+      detail:
+        "In Peru, SMEs represent 99.3% of formal companies (over 2.3 million firms). Competitive advantage will come from automating earlier.",
+      sourceLabel: "PRODUCE OGEIEE (MIPYME 2024)",
+      sourceUrl: "https://ogeiee.produce.gob.pe/index.php/shortcode/estadistica-oee/estadisticas-miPyme"
+    },
+    {
+      stat: "40%",
+      headline: "AI will affect a large share of jobs",
+      detail:
+        "IMF analysis estimates AI will impact about 40% of global employment. For companies, that means redesigning workflows and skills, not just buying tools.",
+      sourceLabel: "IMF (Jan 2024)",
+      sourceUrl:
+        "https://meetings.imf.org/en/IMF/Home/Blogs/Articles/2024/01/14/ai-will-transform-the-global-economy-lets-make-sure-it-benefits-humanity"
+    },
+    {
+      stat: "86%",
+      headline: "Employers already expect AI-driven transformation",
+      detail:
+        "WEF reports 86% of employers expect AI to transform their business by 2030. Delaying usually costs more than phased adoption now.",
+      sourceLabel: "WEF Future of Jobs Report 2025",
+      sourceUrl:
+        "https://www.weforum.org/publications/the-future-of-jobs-report-2025/in-full/1-drivers-of-labour-market-transformation/"
     }
   ]
 };

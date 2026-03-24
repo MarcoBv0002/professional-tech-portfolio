@@ -7,6 +7,7 @@ import {
   casesByLocale,
   credentials,
   dictionaries,
+  insightsByLocale,
   locales,
   profile,
   servicesByLocale,
@@ -89,6 +90,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
   const t = dictionaries[locale];
   const services = servicesByLocale[locale];
+  const insights = insightsByLocale[locale];
   const cases = casesByLocale[locale];
   const primaryCredentials = credentials.filter((credential) => credential.display_tier === "primary");
   const secondaryCredentials = credentials.filter((credential) => credential.display_tier === "secondary");
@@ -133,6 +135,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
           <nav className="mb-8 hidden gap-6 text-sm font-semibold text-slate-300 md:flex">
             <a href="#services">{t.nav.services}</a>
+            <a href="#opportunity">{t.sections.opportunity}</a>
             <a href="#cases">{t.nav.cases}</a>
             <a href="#credentials">{t.nav.credentials}</a>
             <a href="#about">{t.nav.about}</a>
@@ -169,6 +172,27 @@ export default async function LocalePage({ params }: LocalePageProps) {
               <article key={service.title} className="glass-panel rounded-2xl p-5 card-rise-dark">
                 <h3 className="mb-3 text-lg font-semibold text-slate-100">{service.title}</h3>
                 <p className="text-sm leading-relaxed text-slate-300">{service.summary}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="opportunity" className="reveal delay-2 mb-12">
+          <h2 className="section-title">{t.sections.opportunity}</h2>
+          <div className="grid gap-5 md:grid-cols-3">
+            {insights.map((insight) => (
+              <article key={insight.headline} className="glass-panel rounded-2xl p-5 card-rise-dark">
+                <p className="text-3xl font-bold text-cyan-300">{insight.stat}</p>
+                <h3 className="mt-3 text-base font-semibold text-slate-100">{insight.headline}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-300">{insight.detail}</p>
+                <a
+                  className="mt-4 inline-block text-xs font-semibold uppercase tracking-[0.08em] text-cyan-300 underline decoration-cyan-700 decoration-2 underline-offset-4"
+                  href={insight.sourceUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {insight.sourceLabel}
+                </a>
               </article>
             ))}
           </div>
