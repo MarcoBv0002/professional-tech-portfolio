@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -135,20 +136,36 @@ export default async function LocalePage({ params }: LocalePageProps) {
             <a href="#contact">{t.nav.contact}</a>
           </nav>
 
-          <h1 className="font-[var(--font-heading)] text-3xl font-bold leading-tight text-slate-50 md:text-5xl">
-            {t.hero.title}
-          </h1>
-          <p className="mt-4 max-w-3xl text-base text-slate-300 md:text-lg">
-            {t.hero.subtitle}
-          </p>
+          <div className="grid items-center gap-8 md:grid-cols-[1.2fr_0.8fr]">
+            <div>
+              <h1 className="font-[var(--font-heading)] text-3xl font-bold leading-tight text-slate-50 md:text-5xl">
+                {t.hero.title}
+              </h1>
+              <p className="mt-4 max-w-3xl text-base text-slate-300 md:text-lg">
+                {t.hero.subtitle}
+              </p>
 
-          <div className="mt-7 flex flex-wrap gap-3">
-            <a href={t.calendly} target="_blank" rel="noreferrer" className="btn-neon">
-              {t.hero.cta}
-            </a>
-            <a href="#credentials" className="btn-muted">
-              {t.hero.secondaryCta}
-            </a>
+              <div className="mt-7 flex flex-wrap gap-3">
+                <a href={t.calendly} target="_blank" rel="noreferrer" className="btn-neon">
+                  {t.hero.cta}
+                </a>
+                <a href="#credentials" className="btn-muted">
+                  {t.hero.secondaryCta}
+                </a>
+              </div>
+            </div>
+
+            <div className="photo-wrap mx-auto w-full max-w-[320px]">
+              <div className="photo-orbit" />
+              <Image
+                src="/marco-brea.png"
+                alt="Marco Antonio Brea - Arquitecto de Soluciones"
+                width={768}
+                height={1364}
+                priority
+                className="photo-main"
+              />
+            </div>
           </div>
         </header>
 

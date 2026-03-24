@@ -98,7 +98,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       kicker: "Portfolio Comercial | Architect Mode",
       title: "Arquitectura cloud con impacto real en negocio",
       subtitle:
-        "Arquitecto de soluciones con experiencia en AWS, backend enterprise y modernizacion de plataformas con entregas medibles.",
+        "Arquitecto de soluciones con experiencia en diseno, desarrollo e implementacion de software cloud, escritorio y web; incluyendo servicios on-premise y serverless.",
       cta: "Agendar reunion",
       secondaryCta: "Ver certificaciones"
     },
@@ -122,7 +122,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       secondaryCredentials: "Credenciales secundarias"
     },
     aboutText:
-      "Ingeniero de sistemas y arquitecto de soluciones con foco en cloud, automatizacion y modernizacion de aplicaciones. Experiencia liderando migraciones, integraciones y arquitecturas serverless en sectores financiero, educacion y servicios.",
+      "Ingeniero de sistemas y arquitecto de soluciones con foco en cloud, automatizacion y modernizacion de aplicaciones. Experiencia liderando migraciones, integraciones y arquitecturas para entornos on-premise, web, escritorio y serverless en sectores financiero, educacion y servicios.",
     contactText:
       "Si quieres acelerar una modernizacion cloud, definir una arquitectura escalable o optimizar costos en AWS, conversemos.",
     calendly: "https://calendly.com/your-handle/30min"
@@ -139,7 +139,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       kicker: "Commercial Portfolio | Architect Mode",
       title: "Cloud architecture with measurable business impact",
       subtitle:
-        "Solutions architect with hands-on experience in AWS, enterprise backend, and modernization initiatives delivered with measurable outcomes.",
+        "Solutions architect with proven experience designing, building, and implementing cloud, desktop, and web software across both on-premise and serverless environments.",
       cta: "Book a call",
       secondaryCta: "View certifications"
     },
@@ -163,7 +163,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       secondaryCredentials: "Secondary credentials"
     },
     aboutText:
-      "Systems engineer and solutions architect focused on cloud, automation, and application modernization. Experience leading migrations, integrations, and serverless architectures for financial, education, and service companies.",
+      "Systems engineer and solutions architect focused on cloud, automation, and application modernization. Experience leading migrations, integrations, and architectures spanning on-premise, web, desktop, and serverless environments for financial, education, and service companies.",
     contactText:
       "If you need to accelerate cloud modernization, define scalable architecture, or optimize AWS costs, let's talk.",
     calendly: "https://calendly.com/your-handle/30min"
