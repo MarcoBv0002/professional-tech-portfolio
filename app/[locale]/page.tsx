@@ -152,7 +152,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
                 <a href={t.calendly} target="_blank" rel="noreferrer" className="btn-neon">
                   {t.hero.cta}
                 </a>
-                <a href="#credentials" className="btn-muted">
+                <a href="#services" className="btn-muted">
                   {t.hero.secondaryCta}
                 </a>
               </div>
@@ -162,7 +162,19 @@ export default async function LocalePage({ params }: LocalePageProps) {
           </div>
         </header>
 
-        <section id="stack" className="reveal delay-1 mb-12">
+        <section id="services" className="reveal delay-1 mb-12">
+          <h2 className="section-title">{t.sections.services}</h2>
+          <div className="grid gap-5 md:grid-cols-2">
+            {services.map((service) => (
+              <article key={service.title} className="glass-panel rounded-2xl p-5 card-rise-dark">
+                <h3 className="mb-3 text-lg font-semibold text-slate-100">{service.title}</h3>
+                <p className="text-sm leading-relaxed text-slate-300">{service.summary}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="stack" className="reveal delay-2 mb-12">
           <h2 className="section-title">{t.sections.stack}</h2>
           <div className="tech-marquee">
             <div className="tech-track">
@@ -178,18 +190,6 @@ export default async function LocalePage({ params }: LocalePageProps) {
                 </article>
               ))}
             </div>
-          </div>
-        </section>
-
-        <section id="services" className="reveal delay-2 mb-12">
-          <h2 className="section-title">{t.sections.services}</h2>
-          <div className="grid gap-5 md:grid-cols-3">
-            {services.map((service) => (
-              <article key={service.title} className="glass-panel rounded-2xl p-5 card-rise-dark">
-                <h3 className="mb-3 text-lg font-semibold text-slate-100">{service.title}</h3>
-                <p className="text-sm leading-relaxed text-slate-300">{service.summary}</p>
-              </article>
-            ))}
           </div>
         </section>
 
@@ -270,11 +270,6 @@ export default async function LocalePage({ params }: LocalePageProps) {
           </div>
         </section>
 
-        <section id="about" className="glass-panel reveal delay-3 mb-12 rounded-2xl p-6">
-          <h2 className="section-title">{t.sections.about}</h2>
-          <p className="mt-4 max-w-4xl text-slate-300">{t.aboutText}</p>
-        </section>
-
         <section id="contact" className="glass-panel reveal delay-3 rounded-2xl border border-cyan-400/25 p-6">
           <h2 className="section-title">{t.sections.contact}</h2>
           <p className="mt-3 max-w-3xl text-slate-300">{t.contactText}</p>
@@ -289,6 +284,16 @@ export default async function LocalePage({ params }: LocalePageProps) {
               GitHub
             </a>
           </div>
+        </section>
+
+        <section
+          id="about"
+          className="glass-panel reveal delay-3 mt-10 rounded-2xl border border-white/10 p-5 opacity-80"
+        >
+          <h2 className="text-lg font-semibold uppercase tracking-[0.08em] text-slate-300">
+            {t.sections.about}
+          </h2>
+          <p className="mt-3 max-w-4xl text-sm leading-relaxed text-slate-400">{t.aboutText}</p>
         </section>
       </div>
 

@@ -95,15 +95,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
       contact: "Contacto"
     },
     hero: {
-      kicker: "Portfolio Comercial | Architect Mode",
-      title: "Arquitectura cloud con impacto real en negocio",
+      kicker: "Servicios de Transformacion Digital",
+      title: "Servicios de IA y Cloud para acelerar tu negocio",
       subtitle:
-        "Arquitecto de soluciones con experiencia en diseno, desarrollo e implementacion de software cloud, escritorio y web; incluyendo servicios on-premise y serverless.",
+        "Automatiza procesos con IA, migra cargas criticas a la nube y adopta arquitecturas modernas con foco en resultados medibles.",
       cta: "Agendar reunion",
-      secondaryCta: "Ver certificaciones"
+      secondaryCta: "Ver servicios"
     },
     sections: {
-      services: "Servicios",
+      services: "Servicios ofrecidos",
       cases: "Casos de impacto (anonimos)",
       credentials: "Certificaciones y formacion",
       stack: "Stack y tecnologias",
@@ -124,7 +124,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutText:
       "Ingeniero de sistemas y arquitecto de soluciones con foco en cloud, automatizacion y modernizacion de aplicaciones. Experiencia liderando migraciones, integraciones y arquitecturas para entornos on-premise, web, escritorio y serverless en sectores financiero, educacion y servicios.",
     contactText:
-      "Si quieres acelerar una modernizacion cloud, definir una arquitectura escalable o optimizar costos en AWS, conversemos.",
+      "Conversemos sobre como llevar tu operacion hacia IA aplicada, cloud escalable y automatizacion de punta a punta.",
     calendly: "https://calendly.com/your-handle/30min"
   },
   en: {
@@ -136,15 +136,15 @@ export const dictionaries: Record<Locale, Dictionary> = {
       contact: "Contact"
     },
     hero: {
-      kicker: "Commercial Portfolio | Architect Mode",
-      title: "Cloud architecture with measurable business impact",
+      kicker: "Digital Transformation Services",
+      title: "AI and Cloud services to accelerate your business",
       subtitle:
-        "Solutions architect with proven experience designing, building, and implementing cloud, desktop, and web software across both on-premise and serverless environments.",
+        "Automate workflows with AI, migrate critical workloads to the cloud, and modernize architecture with clear business outcomes.",
       cta: "Book a call",
-      secondaryCta: "View certifications"
+      secondaryCta: "View services"
     },
     sections: {
-      services: "Services",
+      services: "Service offerings",
       cases: "Impact case studies (anonymous)",
       credentials: "Certifications and education",
       stack: "Tech stack",
@@ -165,7 +165,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     aboutText:
       "Systems engineer and solutions architect focused on cloud, automation, and application modernization. Experience leading migrations, integrations, and architectures spanning on-premise, web, desktop, and serverless environments for financial, education, and service companies.",
     contactText:
-      "If you need to accelerate cloud modernization, define scalable architecture, or optimize AWS costs, let's talk.",
+      "Let's discuss how to move your operation toward applied AI, scalable cloud architecture, and end-to-end automation.",
     calendly: "https://calendly.com/your-handle/30min"
   }
 };
@@ -173,36 +173,46 @@ export const dictionaries: Record<Locale, Dictionary> = {
 export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
   es: [
     {
-      title: "Cloud Architecture Assessment",
+      title: "Automatiza con IA",
       summary:
-        "Evaluacion de arquitectura actual con roadmap por fases para disponibilidad, seguridad y costo."
+        "Diseno e implementacion de asistentes, flujos inteligentes y automatizaciones con IA para reducir tiempos operativos."
     },
     {
-      title: "Diseno de soluciones AWS",
+      title: "Migra hacia la nube",
       summary:
-        "Arquitecturas serverless y microservicios para productos nuevos o modernizacion de sistemas legacy."
+        "Migracion progresiva de aplicaciones on-premise a AWS con enfoque en continuidad, seguridad y performance."
     },
     {
-      title: "Backend enterprise",
+      title: "Adopta IA en tu operacion",
       summary:
-        "Diseno e implementacion de APIs, integraciones y patrones de escalabilidad para cargas criticas."
+        "Estrategia de adopcion de IA para equipos y procesos con casos de uso priorizados por impacto."
+    },
+    {
+      title: "Arquitectura cloud y serverless",
+      summary:
+        "Diseno de plataformas modernas con microservicios, Lambda y APIs para crecer sin friccion."
     }
   ],
   en: [
     {
-      title: "Cloud Architecture Assessment",
+      title: "Automate with AI",
       summary:
-        "Current-state architecture review with a phased roadmap for availability, security, and cost."
+        "Design and implementation of AI assistants, smart workflows, and automations to reduce operational time."
     },
     {
-      title: "AWS Solution Design",
+      title: "Migrate to cloud",
       summary:
-        "Serverless and microservices architecture for greenfield products and legacy modernization."
+        "Phased migration from on-premise systems to AWS with continuity, security, and performance as core goals."
     },
     {
-      title: "Enterprise Backend Engineering",
+      title: "Adopt AI across operations",
       summary:
-        "API, integration, and scalability patterns for critical workloads."
+        "AI adoption strategy for teams and business processes with impact-driven use case prioritization."
+    },
+    {
+      title: "Cloud and serverless architecture",
+      summary:
+        "Modern platform design with microservices, Lambda, and APIs to scale with lower operational friction."
     }
   ]
 };
