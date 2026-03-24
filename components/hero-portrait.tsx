@@ -6,15 +6,11 @@ import { useState } from "react";
 type TiltState = {
   rotateX: number;
   rotateY: number;
-  glowX: number;
-  glowY: number;
 };
 
 const neutralTilt: TiltState = {
   rotateX: 0,
-  rotateY: 0,
-  glowX: 50,
-  glowY: 35
+  rotateY: 0
 };
 
 export default function HeroPortrait() {
@@ -30,9 +26,7 @@ export default function HeroPortrait() {
 
     setTilt({
       rotateX,
-      rotateY,
-      glowX: px * 100,
-      glowY: py * 100
+      rotateY
     });
   }
 
@@ -43,15 +37,12 @@ export default function HeroPortrait() {
       onMouseLeave={() => setTilt(neutralTilt)}
       style={
         {
-          transform: `perspective(980px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`,
-          "--glow-x": `${tilt.glowX}%`,
-          "--glow-y": `${tilt.glowY}%`
+          transform: `perspective(980px) rotateX(${tilt.rotateX}deg) rotateY(${tilt.rotateY}deg)`
         } as React.CSSProperties
       }
     >
       <div className="photo-orbit" />
       <div className="photo-shadow" />
-      <div className="photo-shine" />
       <Image
         src="/marco-brea.png"
         alt="Marco Antonio Brea - Arquitecto de Soluciones"

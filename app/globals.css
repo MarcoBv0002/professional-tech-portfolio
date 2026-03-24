@@ -275,51 +275,36 @@ body {
 .photo-orbit {
   position: absolute;
   z-index: 1;
-  left: 12%;
-  right: 12%;
-  bottom: 8%;
-  height: 28%;
+  left: 22%;
+  right: 22%;
+  bottom: 7%;
+  height: 20%;
   border-radius: 9999px;
   background: radial-gradient(
     ellipse at center,
-    rgba(56, 189, 248, 0.36) 0%,
-    rgba(34, 211, 238, 0.18) 38%,
-    rgba(2, 6, 23, 0) 78%
+    rgba(56, 189, 248, 0.44) 0%,
+    rgba(34, 211, 238, 0.2) 44%,
+    rgba(2, 6, 23, 0) 80%
   );
-  filter: blur(14px);
+  filter: blur(16px);
   animation: pulse-ring 3.2s ease-in-out infinite;
 }
 
 .photo-shadow {
   position: absolute;
   z-index: 0;
-  left: 14%;
-  right: 14%;
-  bottom: 4%;
-  height: 18%;
+  left: 18%;
+  right: 18%;
+  bottom: 2%;
+  height: 16%;
   border-radius: 9999px;
   background: radial-gradient(
     ellipse at center,
-    rgba(34, 211, 238, 0.26) 0%,
-    rgba(15, 23, 42, 0.08) 46%,
+    rgba(34, 211, 238, 0.3) 0%,
+    rgba(14, 116, 144, 0.14) 38%,
     rgba(2, 6, 23, 0) 72%
   );
-  filter: blur(18px);
-}
-
-.photo-shine {
-  position: absolute;
-  z-index: 3;
-  inset: 4% 12% 28%;
-  border-radius: 9999px;
-  background: radial-gradient(
-    circle at var(--glow-x, 50%) var(--glow-y, 35%),
-    rgba(255, 255, 255, 0.18) 0%,
-    rgba(56, 189, 248, 0.14) 16%,
-    rgba(2, 6, 23, 0) 52%
-  );
-  pointer-events: none;
-  mix-blend-mode: screen;
+  filter: blur(20px);
 }
 
 @keyframes pulse-ring {
