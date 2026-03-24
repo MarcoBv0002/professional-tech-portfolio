@@ -105,12 +105,13 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
   return (
     <main className="site-shell">
+      <div className="bg-aurora" />
       <div className="bg-grid" />
       <div className="bg-glow bg-glow-cyan" />
       <div className="bg-glow bg-glow-blue" />
 
       <div className="relative z-10 mx-auto max-w-6xl px-6 pb-20 pt-8 md:px-10">
-        <header className="glass-panel mb-10 rounded-3xl p-6 md:p-10">
+        <header className="glass-panel reveal mb-10 rounded-3xl p-6 md:p-10">
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <span className="neon-pill">{t.hero.kicker}</span>
             <div className="inline-flex rounded-full border border-white/20 bg-[#070a15] p-1 text-sm">
@@ -169,24 +170,26 @@ export default async function LocalePage({ params }: LocalePageProps) {
           </div>
         </header>
 
-        <section id="stack" className="mb-12">
+        <section id="stack" className="reveal delay-1 mb-12">
           <h2 className="section-title">{t.sections.stack}</h2>
-          <div className="tech-grid">
-            {techStack.map((tech) => (
-              <article key={tech.name} className="tech-card">
-                <img
-                  src={`https://cdn.simpleicons.org/${tech.logo}/22d3ee`}
-                  alt={tech.name}
-                  width={18}
-                  height={18}
-                />
-                <span>{tech.name}</span>
-              </article>
-            ))}
+          <div className="tech-marquee">
+            <div className="tech-track">
+              {[...techStack, ...techStack].map((tech, index) => (
+                <article key={`${tech.name}-${index}`} className="tech-card">
+                  <img
+                    src={`https://cdn.simpleicons.org/${tech.logo}/22d3ee`}
+                    alt={tech.name}
+                    width={18}
+                    height={18}
+                  />
+                  <span>{tech.name}</span>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section id="services" className="mb-12">
+        <section id="services" className="reveal delay-2 mb-12">
           <h2 className="section-title">{t.sections.services}</h2>
           <div className="grid gap-5 md:grid-cols-3">
             {services.map((service) => (
@@ -198,7 +201,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
           </div>
         </section>
 
-        <section id="cases" className="mb-12">
+        <section id="cases" className="reveal delay-2 mb-12">
           <h2 className="section-title">{t.sections.cases}</h2>
           <div className="space-y-5">
             {cases.map((entry) => (
@@ -225,7 +228,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
           </div>
         </section>
 
-        <section id="credentials" className="mb-12">
+        <section id="credentials" className="reveal delay-3 mb-12">
           <h2 className="section-title">{t.sections.credentials}</h2>
           <div className="mb-6 grid gap-5 md:grid-cols-3">
             {primaryCredentials.map((credential) => (
@@ -275,12 +278,12 @@ export default async function LocalePage({ params }: LocalePageProps) {
           </div>
         </section>
 
-        <section id="about" className="glass-panel mb-12 rounded-2xl p-6">
+        <section id="about" className="glass-panel reveal delay-3 mb-12 rounded-2xl p-6">
           <h2 className="section-title">{t.sections.about}</h2>
           <p className="mt-4 max-w-4xl text-slate-300">{t.aboutText}</p>
         </section>
 
-        <section id="contact" className="glass-panel rounded-2xl border border-cyan-400/25 p-6">
+        <section id="contact" className="glass-panel reveal delay-3 rounded-2xl border border-cyan-400/25 p-6">
           <h2 className="section-title">{t.sections.contact}</h2>
           <p className="mt-3 max-w-3xl text-slate-300">{t.contactText}</p>
           <div className="mt-6 flex flex-wrap gap-3">

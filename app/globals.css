@@ -24,6 +24,18 @@ body {
   isolation: isolate;
 }
 
+.bg-aurora {
+  position: fixed;
+  inset: -25% -20%;
+  z-index: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.18), transparent 38%),
+    radial-gradient(circle at 75% 15%, rgba(99, 102, 241, 0.2), transparent 36%),
+    radial-gradient(circle at 50% 85%, rgba(16, 185, 129, 0.14), transparent 35%);
+  filter: blur(22px);
+  animation: aurora-shift 18s ease-in-out infinite alternate;
+}
+
 .bg-grid {
   position: fixed;
   inset: 0;
@@ -64,6 +76,25 @@ body {
   border: 1px solid rgba(148, 163, 184, 0.2);
   box-shadow: 0 16px 40px -18px rgba(0, 0, 0, 0.75), inset 0 1px 0 rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.08) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  transform: translateX(-120%);
+  animation: glass-sheen 6.5s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .neon-pill {
@@ -95,11 +126,12 @@ body {
   font-size: 0.9rem;
   font-weight: 700;
   box-shadow: 0 0 22px rgba(34, 211, 238, 0.3);
-  transition: transform 170ms ease;
+  transition: transform 170ms ease, box-shadow 170ms ease;
 }
 
 .btn-neon:hover {
   transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(34, 211, 238, 0.4);
 }
 
 .btn-muted {
@@ -129,6 +161,44 @@ body {
   padding: 0.55rem 0.75rem;
   font-size: 0.8rem;
   font-weight: 600;
+  position: relative;
+  overflow: hidden;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.tech-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(110deg, transparent 0%, rgba(34, 211, 238, 0.2) 50%, transparent 100%);
+  transform: translateX(-140%);
+  transition: transform 500ms ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 211, 238, 0.5);
+  box-shadow: 0 16px 28px -20px rgba(34, 211, 238, 0.55);
+}
+
+.tech-card:hover::after {
+  transform: translateX(140%);
+}
+
+.tech-marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 12%, black 88%, transparent);
+}
+
+.tech-track {
+  display: flex;
+  width: max-content;
+  gap: 0.65rem;
+  animation: tech-scroll 36s linear infinite;
+}
+
+.tech-marquee:hover .tech-track {
+  animation-play-state: paused;
 }
 
 .card-rise-dark {
@@ -138,6 +208,24 @@ body {
 .card-rise-dark:hover {
   transform: translateY(-3px);
   box-shadow: 0 22px 38px -24px rgba(34, 211, 238, 0.45);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  animation: reveal-up 640ms ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 90ms;
+}
+
+.delay-2 {
+  animation-delay: 170ms;
+}
+
+.delay-3 {
+  animation-delay: 250ms;
 }
 
 .tag-neon {
@@ -202,8 +290,57 @@ body {
   }
 }
 
+@keyframes aurora-shift {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(1.5%, -2%, 0) scale(1.04);
+  }
+  100% {
+    transform: translate3d(-1.5%, 2%, 0) scale(1.02);
+  }
+}
+
+@keyframes glass-sheen {
+  0%,
+  58% {
+    transform: translateX(-120%);
+  }
+  70%,
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes tech-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @media (min-width: 768px) {
   .tech-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bg-aurora,
+  .glass-panel::after,
+  .tech-track,
+  .photo-orbit,
+  .reveal {
+    animation: none !important;
   }
 }
