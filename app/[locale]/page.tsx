@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import HeroPortrait from "@/components/hero-portrait";
+import ParticleField from "@/components/particle-field";
 import {
   casesByLocale,
   credentials,
@@ -105,6 +106,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
   return (
     <main className="site-shell">
+      <ParticleField />
       <div className="bg-aurora" />
       <div className="bg-grid" />
       <div className="bg-glow bg-glow-cyan" />
@@ -156,17 +158,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
               </div>
             </div>
 
-            <div className="photo-wrap mx-auto w-full max-w-[320px]">
-              <div className="photo-orbit" />
-              <Image
-                src="/marco-brea.png"
-                alt="Marco Antonio Brea - Arquitecto de Soluciones"
-                width={768}
-                height={1364}
-                priority
-                className="photo-main"
-              />
-            </div>
+            <HeroPortrait />
           </div>
         </header>
 
