@@ -89,6 +89,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
   }
 
   const t = dictionaries[locale];
+  const aboutParagraphs = t.aboutText.split("\n\n").filter(Boolean);
   const services = servicesByLocale[locale];
   const insights = insightsByLocale[locale];
   const cases = casesByLocale[locale];
@@ -164,6 +165,22 @@ export default async function LocalePage({ params }: LocalePageProps) {
             <HeroPortrait />
           </div>
         </header>
+
+        <section
+          id="about"
+          className="glass-panel reveal delay-1 mb-12 rounded-2xl border border-white/10 p-6 opacity-90"
+        >
+          <h2 className="text-lg font-semibold uppercase tracking-[0.08em] text-slate-200">
+            {t.sections.about}
+          </h2>
+          <div className="mt-4 space-y-4">
+            {aboutParagraphs.map((paragraph, index) => (
+              <p key={`${t.sections.about}-${index}`} className="max-w-5xl text-sm leading-relaxed text-slate-300">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </section>
 
         <section id="services" className="reveal delay-1 mb-12">
           <h2 className="section-title">{t.sections.services}</h2>
@@ -310,15 +327,6 @@ export default async function LocalePage({ params }: LocalePageProps) {
           </div>
         </section>
 
-        <section
-          id="about"
-          className="glass-panel reveal delay-3 mt-10 rounded-2xl border border-white/10 p-5 opacity-80"
-        >
-          <h2 className="text-lg font-semibold uppercase tracking-[0.08em] text-slate-300">
-            {t.sections.about}
-          </h2>
-          <p className="mt-3 max-w-4xl text-sm leading-relaxed text-slate-400">{t.aboutText}</p>
-        </section>
       </div>
 
       <script

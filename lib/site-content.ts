@@ -116,7 +116,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       cases: "Casos de impacto (anonimos)",
       credentials: "Certificaciones y formacion",
       stack: "Stack y tecnologias",
-      about: "Sobre mi",
+      about: "SOBRE MI",
       contact: "Contacto"
     },
     labels: {
@@ -131,7 +131,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       secondaryCredentials: "Credenciales secundarias"
     },
     aboutText:
-      "Ingeniero de sistemas y arquitecto de soluciones con foco en cloud, automatizacion y modernizacion de aplicaciones. Experiencia liderando migraciones, integraciones y arquitecturas para entornos on-premise, web, escritorio y serverless en sectores financiero, educacion y servicios.",
+      "Soy arquitecto de soluciones especializado en cloud, automatizacion e integracion de sistemas, con mas de 7 anios de experiencia ayudando a empresas a mejorar su operacion mediante tecnologia.\n\nHe trabajado en proyectos de alto impacto en sectores como el financiero y servicios, liderando implementaciones que van desde automatizacion con IA hasta migraciones hacia la nube y modernizacion de sistemas legacy.\n\nMi enfoque esta en entender el negocio antes que la tecnologia, identificar oportunidades de mejora y diseniar soluciones que realmente generen eficiencia, control y crecimiento.\n\nTrabajo con una premisa clara: la tecnologia debe simplificar la operacion, no complicarla.",
     contactText:
       "Conversemos sobre como llevar tu operacion hacia IA aplicada, cloud escalable y automatizacion de punta a punta.",
     calendly: "https://calendly.com/your-handle/30min"
@@ -145,12 +145,12 @@ export const dictionaries: Record<Locale, Dictionary> = {
       contact: "Contact"
     },
     hero: {
-      kicker: "Digital Transformation Services",
-      title: "AI and Cloud services to accelerate your business",
+      kicker: "Digital Transformation",
+      title: "Let's design a solution for your technology challenges",
       subtitle:
-        "Automate workflows with AI, migrate critical workloads to the cloud, and modernize architecture with clear business outcomes.",
+        "Automate processes, reduce operating costs, and scale your business with AI and cloud implemented in a practical, frictionless way with measurable outcomes. Get professional advisory focused on identifying optimization opportunities and technology growth.",
       cta: "Book a call",
-      secondaryCta: "View services"
+      secondaryCta: "Learn more"
     },
     sections: {
       services: "Service offerings",
@@ -158,7 +158,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       cases: "Impact case studies (anonymous)",
       credentials: "Certifications and education",
       stack: "Tech stack",
-      about: "About",
+      about: "ABOUT ME",
       contact: "Contact"
     },
     labels: {
@@ -173,7 +173,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       secondaryCredentials: "Secondary credentials"
     },
     aboutText:
-      "Systems engineer and solutions architect focused on cloud, automation, and application modernization. Experience leading migrations, integrations, and architectures spanning on-premise, web, desktop, and serverless environments for financial, education, and service companies.",
+      "I am a solutions architect specialized in cloud, automation, and systems integration, with more than 7 years of experience helping companies improve operations through technology.\n\nI have worked on high-impact projects in sectors such as financial services and business services, leading implementations ranging from AI automation to cloud migrations and legacy modernization.\n\nMy approach is to understand the business before the technology, identify improvement opportunities, and design solutions that truly deliver efficiency, control, and growth.\n\nI work with one clear premise: technology must simplify operations, not complicate them.",
     contactText:
       "Let's discuss how to move your operation toward applied AI, scalable cloud architecture, and end-to-end automation.",
     calendly: "https://calendly.com/your-handle/30min"
