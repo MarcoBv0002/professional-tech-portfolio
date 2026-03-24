@@ -153,26 +153,26 @@ body {
 .photo-wrap {
   position: relative;
   border-radius: 1.35rem;
-  padding: 0.5rem;
-  background: linear-gradient(145deg, rgba(34, 211, 238, 0.4), rgba(99, 102, 241, 0.3));
+  padding: 0.2rem;
 }
 
 .photo-main {
   width: 100%;
   height: auto;
   border-radius: 1rem;
-  object-fit: cover;
-  background: radial-gradient(circle at 35% 35%, rgba(51, 65, 85, 0.85), rgba(2, 6, 23, 0.95));
-  border: 1px solid rgba(148, 163, 184, 0.2);
-  box-shadow: 0 24px 48px -20px rgba(34, 211, 238, 0.35);
+  object-fit: contain;
+  background: transparent;
+  border: none;
+  box-shadow: drop-shadow(0 22px 28px rgba(0, 0, 0, 0.45))
+    drop-shadow(0 0 22px rgba(34, 211, 238, 0.22));
 }
 
 .photo-orbit {
   position: absolute;
-  inset: -10px;
-  border-radius: 1.4rem;
-  border: 1px solid rgba(34, 211, 238, 0.32);
-  filter: blur(0.2px);
+  inset: 5% 6% 10%;
+  border-radius: 9999px;
+  border: 1px solid rgba(34, 211, 238, 0.28);
+  filter: blur(0.1px);
   animation: pulse-ring 2.8s ease-in-out infinite;
 }
 
