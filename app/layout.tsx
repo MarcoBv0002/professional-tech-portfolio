@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Solutions Architect Portfolio",
-  description: "Commercial CV website for a cloud solutions architect."
+  description: "Commercial website for a cloud solutions architect."
 };
 
 export default function RootLayout({

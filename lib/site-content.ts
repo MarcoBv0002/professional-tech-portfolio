@@ -104,12 +104,11 @@ export const dictionaries: Record<Locale, Dictionary> = {
       contact: "Contacto"
     },
     hero: {
-      kicker: "Servicios de Transformacion Digital",
-      title: "Servicios de IA y Cloud para acelerar tu negocio",
-      subtitle:
-        "Automatiza procesos con IA, migra cargas criticas a la nube y adopta arquitecturas modernas con foco en resultados medibles.",
+      kicker: "Transformación Digital",
+      title: "Diseñemos una solución a tus problemas tecnológicos",
+      subtitle: "Automatiza procesos, reduce costos operativos y escala tu negocio con IA y cloud implementados de forma práctica, sin fricción y con resultados medibles a tu empresa. Accede a una asesoría profesional enfocada en identificar oportunidades de optimización y crecimiento tecnológico.",
       cta: "Agendar reunion",
-      secondaryCta: "Ver servicios"
+      secondaryCta: "Conocer un poco más"
     },
     sections: {
       services: "Servicios ofrecidos",

@@ -55,7 +55,7 @@ export async function generateMetadata({
   const dictionary = dictionaries[locale];
   const title =
     locale === "es"
-      ? "Marco Brea | Arquitecto de Soluciones Cloud"
+      ? "Transformación Digital para Pymes | Marco Brea"
       : "Marco Brea | Cloud Solutions Architect";
 
   return {
