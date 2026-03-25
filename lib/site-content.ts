@@ -26,6 +26,7 @@ export type CaseStudy = {
 
 export type ServiceOffering = {
   icon: string;
+  image: string;
   title: string;
   lead: string;
   summary: string;
@@ -207,6 +208,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
   es: [
     {
       icon: "openai",
+      image: "/images/services/ia.png",
       title: "Automatiza con IA",
       lead: "Aplica inteligencia artificial en tu negocio sin complicarte",
       summary:
@@ -225,6 +227,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
     },
     {
       icon: "amazonaws",
+      image: "/images/services/cloud.png",
       title: "Migra hacia la nube",
       lead: "Pasa de procesos desordenados a sistemas que si controlan tu negocio",
       summary:
@@ -241,6 +244,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
     },
     {
       icon: "vercel",
+      image: "/images/services/upgrade.png",
       title: "Obten aplicaciones a la medida de tu negocio",
       lead: "Haz que la tecnologia se adapte a tu empresa, no al reves",
       summary:
@@ -256,6 +260,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
     },
     {
       icon: "googlegemini",
+      image: "/images/services/asistente.png",
       title: "Asesoria en transformacion digital para PYMES",
       lead: "Toma decisiones correctas antes de invertir de mas",
       summary:
@@ -275,6 +280,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
   en: [
     {
       icon: "openai",
+      image: "/images/services/ia.png",
       title: "Apply AI in your business",
       lead: "Bring AI into operations without unnecessary complexity",
       summary:
@@ -293,6 +299,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
     },
     {
       icon: "amazonaws",
+      image: "/images/services/cloud.png",
       title: "Migrate your solutions to modern technologies",
       lead: "Move from operational disorder to systems that truly control your business",
       summary:
@@ -309,6 +316,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
     },
     {
       icon: "vercel",
+      image: "/images/services/upgrade.png",
       title: "Get applications tailored to your business",
       lead: "Make technology adapt to your company, not the other way around",
       summary:
@@ -324,6 +332,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
     },
     {
       icon: "googlegemini",
+      image: "/images/services/asistente.png",
       title: "Digital transformation advisory for SMEs",
       lead: "Make better decisions before overspending on technology",
       summary:

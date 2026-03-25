@@ -217,6 +217,14 @@ export default async function LocalePage({ params }: LocalePageProps) {
           <div className="grid gap-5 md:grid-cols-2">
             {services.map((service) => (
               <article key={service.title} className="service-card glass-panel rounded-3xl p-6 card-rise-dark">
+                <div className="service-card__media">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="service-card__media-image"
+                    loading="lazy"
+                  />
+                </div>
                 <div className="service-card__top">
                   <div className="service-card__icon">
                     <LogoImage
