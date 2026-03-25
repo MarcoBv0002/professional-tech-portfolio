@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import HeroPortrait from "@/components/hero-portrait";
@@ -166,23 +167,47 @@ export default async function LocalePage({ params }: LocalePageProps) {
               </div>
             </div>
 
-            <HeroPortrait />
+            <div className="hero-media">
+              <div className="hero-media__frame">
+                <Image
+                  src="/portada.png"
+                  alt="Portada de servicios de transformacion digital"
+                  width={1376}
+                  height={768}
+                  priority
+                  className="hero-media__image"
+                />
+              </div>
+            </div>
           </div>
         </header>
 
         <section
           id="about"
-          className="glass-panel reveal delay-1 mb-12 rounded-2xl border border-white/10 p-6 opacity-90"
+          className="about-panel glass-panel reveal delay-1 mb-12 rounded-[2rem] border border-white/10 p-6 md:p-8"
         >
-          <h2 className="text-lg font-semibold uppercase tracking-[0.08em] text-slate-200">
-            {t.sections.about}
-          </h2>
-          <div className="mt-4 space-y-4">
-            {aboutParagraphs.map((paragraph, index) => (
-              <p key={`${t.sections.about}-${index}`} className="max-w-5xl text-sm leading-relaxed text-slate-300">
-                {paragraph}
-              </p>
-            ))}
+          <div className="grid items-center gap-8 md:grid-cols-[0.72fr_1.28fr]">
+            <div className="about-panel__portrait">
+              <HeroPortrait />
+            </div>
+            <div>
+              <p className="neon-pill inline-flex">{t.sections.about}</p>
+              <h2 className="mt-5 font-[var(--font-heading)] text-3xl font-bold text-slate-50 md:text-4xl">
+                {locale === "es"
+                  ? "Arquitectura, automatizacion e IA aplicada al negocio"
+                  : "Architecture, automation, and AI applied to business"}
+              </h2>
+              <div className="mt-5 space-y-4">
+                {aboutParagraphs.map((paragraph, index) => (
+                  <p
+                    key={`${t.sections.about}-${index}`}
+                    className="max-w-5xl text-sm leading-relaxed text-slate-300 md:text-[0.96rem]"
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

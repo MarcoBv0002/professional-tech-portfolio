@@ -573,10 +573,12 @@ export const credentials: Credential[] = [
 
 export const techStack: TechItem[] = [
   { name: "C#", logo: "c-sharp", category: "backend" },
+  { name: "NestJS", logo: "nest-js", category: "backend" },
   { name: "Python", logo: "python", category: "backend" },
   { name: "TypeScript", logo: "typescript", category: "backend" },
   { name: "JavaScript", logo: "javascript", category: "backend" },
   { name: "Node.js", logo: "node", category: "backend" },
+  { name: "React", logo: "react", category: "frontend" },
   { name: "SQL Server", logo: "sql-server", category: "database" },
   { name: "PostgreSQL", logo: "postgresql", category: "database" },
   { name: "MySQL", logo: "mysql", category: "database" },
@@ -585,5 +587,8 @@ export const techStack: TechItem[] = [
   { name: "AWS Lambda", logo: "aws-lambda", category: "cloud" },
   { name: "Amazon RDS", logo: "aws-rds", category: "cloud" },
   { name: "Amazon S3", logo: "aws-s3", category: "cloud" },
+  { name: "WhatsApp API", logo: "api-whatsapp", category: "cloud" },
+  { name: "Docker", logo: "docker", category: "devops" },
+  { name: "GitHub Actions", logo: "github-actions", category: "devops" },
   { name: "Jenkins", logo: "jenkins", category: "devops" }
 ];
