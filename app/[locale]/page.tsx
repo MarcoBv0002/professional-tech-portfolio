@@ -127,6 +127,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
                 <Link
                   key={item}
                   href={`/${item}`}
+                  scroll={false}
                   className={`rounded-full px-3 py-1 font-medium ${
                     item === locale ? "bg-cyan-300 text-slate-900" : "text-slate-300"
                   }`}

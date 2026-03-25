@@ -12,6 +12,7 @@ body {
   min-height: 100%;
   background: #030712;
   color: #e2e8f0;
+  overflow-anchor: none;
 }
 
 * {
@@ -22,6 +23,16 @@ body {
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  overflow-anchor: none;
+}
+
+#stack,
+#cases,
+#credentials,
+#contact,
+.tech-marquee,
+.tech-track {
+  overflow-anchor: none;
 }
 
 .particle-field {
