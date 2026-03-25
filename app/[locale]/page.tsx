@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import HeroPortrait from "@/components/hero-portrait";
+import LogoImage from "@/components/logo-image";
 import ParticleField from "@/components/particle-field";
 import {
   casesByLocale,
@@ -56,7 +57,7 @@ export async function generateMetadata({
   const dictionary = dictionaries[locale];
   const title =
     locale === "es"
-      ? "Transformación Digital para Pymes | Marco Brea"
+      ? "Transformacion Digital para Pymes | Marco Brea"
       : "Marco Brea | Cloud Solutions Architect";
 
   return {
@@ -191,11 +192,12 @@ export default async function LocalePage({ params }: LocalePageProps) {
               <article key={service.title} className="service-card glass-panel rounded-3xl p-6 card-rise-dark">
                 <div className="service-card__top">
                   <div className="service-card__icon">
-                    <img
-                      src={`https://cdn.simpleicons.org/${service.icon}/67e8f9`}
+                    <LogoImage
+                      logo={service.icon}
                       alt={service.title}
                       width={22}
                       height={22}
+                      color="67e8f9"
                     />
                   </div>
                   <div>
@@ -313,8 +315,8 @@ export default async function LocalePage({ params }: LocalePageProps) {
             <div className="tech-track">
               {[...techStack, ...techStack].map((tech, index) => (
                 <article key={`${tech.name}-${index}`} className="tech-card">
-                  <img
-                    src={`https://cdn.simpleicons.org/${tech.logo}/22d3ee`}
+                  <LogoImage
+                    logo={tech.logo}
                     alt={tech.name}
                     width={18}
                     height={18}
@@ -418,7 +420,6 @@ export default async function LocalePage({ params }: LocalePageProps) {
             </a>
           </div>
         </section>
-
       </div>
 
       <script
