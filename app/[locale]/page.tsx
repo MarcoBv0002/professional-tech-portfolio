@@ -11,6 +11,7 @@ import {
   locales,
   profile,
   servicesByLocale,
+  sprintOfferByLocale,
   techStack,
   type Locale
 } from "@/lib/site-content";
@@ -91,6 +92,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
   const t = dictionaries[locale];
   const aboutParagraphs = t.aboutText.split("\n\n").filter(Boolean);
   const services = servicesByLocale[locale];
+  const sprint = sprintOfferByLocale[locale];
   const insights = insightsByLocale[locale];
   const cases = casesByLocale[locale];
   const primaryCredentials = credentials.filter((credential) => credential.display_tier === "primary");
@@ -186,11 +188,101 @@ export default async function LocalePage({ params }: LocalePageProps) {
           <h2 className="section-title">{t.sections.services}</h2>
           <div className="grid gap-5 md:grid-cols-2">
             {services.map((service) => (
-              <article key={service.title} className="glass-panel rounded-2xl p-5 card-rise-dark">
-                <h3 className="mb-3 text-lg font-semibold text-slate-100">{service.title}</h3>
-                <p className="text-sm leading-relaxed text-slate-300">{service.summary}</p>
+              <article key={service.title} className="service-card glass-panel rounded-3xl p-6 card-rise-dark">
+                <div className="service-card__top">
+                  <div className="service-card__icon">
+                    <img
+                      src={`https://cdn.simpleicons.org/${service.icon}/67e8f9`}
+                      alt={service.title}
+                      width={22}
+                      height={22}
+                    />
+                  </div>
+                  <div>
+                    <p className="service-card__lead">{service.lead}</p>
+                    <h3 className="mt-2 text-xl font-semibold text-slate-100">{service.title}</h3>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-slate-300">{service.summary}</p>
+                <div className="mt-5 space-y-2">
+                  {service.bullets.map((bullet) => (
+                    <div key={bullet} className="service-bullet">
+                      <span className="service-bullet__dot" />
+                      <span>{bullet}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="service-outcome mt-5">{service.outcome}</div>
+                {service.note ? <p className="mt-3 text-sm text-cyan-200/90">{service.note}</p> : null}
               </article>
             ))}
+          </div>
+        </section>
+
+        <section id="sprint" className="reveal delay-2 mb-12">
+          <div className="sprint-panel glass-panel rounded-[2rem] p-6 md:p-8">
+            <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr]">
+              <div>
+                <p className="neon-pill inline-flex">{t.sections.sprint}</p>
+                <h2 className="mt-5 font-[var(--font-heading)] text-3xl font-bold text-slate-50 md:text-4xl">
+                  {sprint.title}
+                </h2>
+                <p className="mt-4 text-base leading-relaxed text-slate-300">{sprint.intro}</p>
+                <p className="mt-4 text-base leading-relaxed text-cyan-100">{sprint.definition}</p>
+
+                <div className="mt-6 grid gap-3">
+                  {sprint.examples.map((example) => (
+                    <div key={example} className="service-bullet service-bullet--soft">
+                      <span className="service-bullet__dot" />
+                      <span>{example}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="space-y-5">
+                <div className="sprint-box">
+                  <h3 className="sprint-box__title">{sprint.includesTitle}</h3>
+                  <div className="mt-3 space-y-2">
+                    {sprint.includes.map((item) => (
+                      <div key={item} className="service-bullet">
+                        <span className="service-bullet__dot" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="sprint-box">
+                  <h3 className="sprint-box__title">{sprint.audienceTitle}</h3>
+                  <div className="mt-3 space-y-2">
+                    {sprint.audience.map((item) => (
+                      <div key={item} className="service-bullet">
+                        <span className="service-bullet__dot" />
+                        <span>{item}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-8 grid gap-5 md:grid-cols-[1.2fr_0.8fr]">
+              <div className="sprint-why">
+                <h3 className="sprint-box__title">{sprint.whyTitle}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-slate-300">{sprint.whyNow}</p>
+              </div>
+              <div className="sprint-results">
+                <h3 className="sprint-box__title">{sprint.outcomesTitle}</h3>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {sprint.outcomes.map((item) => (
+                    <span key={item} className="tag-neon">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 

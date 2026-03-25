@@ -25,8 +25,13 @@ export type CaseStudy = {
 };
 
 export type ServiceOffering = {
+  icon: string;
   title: string;
+  lead: string;
   summary: string;
+  bullets: string[];
+  outcome: string;
+  note?: string;
 };
 
 export type TechItem = {
@@ -41,6 +46,21 @@ export type MarketInsight = {
   detail: string;
   sourceLabel: string;
   sourceUrl: string;
+};
+
+export type SprintOffer = {
+  title: string;
+  intro: string;
+  definition: string;
+  includesTitle: string;
+  audienceTitle: string;
+  whyTitle: string;
+  outcomesTitle: string;
+  examples: string[];
+  includes: string[];
+  audience: string[];
+  whyNow: string;
+  outcomes: string[];
 };
 
 type Dictionary = {
@@ -60,6 +80,7 @@ type Dictionary = {
   };
   sections: {
     services: string;
+    sprint: string;
     opportunity: string;
     cases: string;
     credentials: string;
@@ -112,6 +133,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     sections: {
       services: "Servicios ofrecidos",
+      sprint: "Digitaliza tu negocio en 30 dias",
       opportunity: "Por que actuar ahora",
       cases: "Casos de impacto (anonimos)",
       credentials: "Certificaciones y formacion",
@@ -154,6 +176,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
     },
     sections: {
       services: "Service offerings",
+      sprint: "Digitize your business in 30 days",
       opportunity: "Why act now",
       cases: "Impact case studies (anonymous)",
       credentials: "Certifications and education",
@@ -183,48 +206,223 @@ export const dictionaries: Record<Locale, Dictionary> = {
 export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
   es: [
     {
+      icon: "openai",
       title: "Automatiza con IA",
+      lead: "Aplica inteligencia artificial en tu negocio sin complicarte",
       summary:
-        "Diseno e implementacion de asistentes, flujos inteligentes y automatizaciones con IA para reducir tiempos operativos."
+        "En 2026 ya no se habla solo de usar IA, sino de tener agentes que trabajan por ti. Hoy eso ya es accesible tambien para PYMES.",
+      bullets: [
+        "Asistente que responde clientes 24/7 por WhatsApp o web.",
+        "Automatizacion de cotizaciones o respuestas frecuentes.",
+        "Clasificacion automatica de clientes o leads.",
+        "Generacion de reportes sin intervencion manual.",
+        "Alertas inteligentes cuando ocurre algo importante en tu operacion."
+      ],
+      outcome:
+        "Menos carga operativa, mas velocidad y mejor atencion al cliente.",
+      note:
+        "Inversion tipica PYME: soluciones concretas entre $500 y $1500 con impacto inmediato."
     },
     {
+      icon: "amazonaws",
       title: "Migra hacia la nube",
+      lead: "Pasa de procesos desordenados a sistemas que si controlan tu negocio",
       summary:
-        "Migracion progresiva de aplicaciones on-premise a AWS con enfoque en continuidad, seguridad y performance."
+        "Muchas empresas en Peru siguen operando con Excel, procesos manuales o sistemas que ya no escalan. El problema no es Excel, es depender de el para todo.",
+      bullets: [
+        "Pasar de archivos dispersos a un sistema ordenado.",
+        "Centralizar ventas, clientes y operaciones.",
+        "Acceder al negocio desde cualquier lugar.",
+        "Tener sistemas disponibles 24/7 sin servidores costosos.",
+        "Reducir errores humanos y perdida de informacion."
+      ],
+      outcome:
+        "Mas orden, mas control y menos dependencia de procesos manuales."
     },
     {
-      title: "Adopta IA en tu operacion",
+      icon: "vercel",
+      title: "Obten aplicaciones a la medida de tu negocio",
+      lead: "Haz que la tecnologia se adapte a tu empresa, no al reves",
       summary:
-        "Estrategia de adopcion de IA para equipos y procesos con casos de uso priorizados por impacto."
+        "Tu negocio es unico, pero probablemente estas usando herramientas genericas. Ahi es donde se pierde eficiencia.",
+      bullets: [
+        "Landing pages que convierten visitas en clientes.",
+        "Sistemas de gestion de ventas, clientes o inventario.",
+        "Paneles con indicadores claros para tomar decisiones.",
+        "Plataformas internas para organizar equipos y procesos."
+      ],
+      outcome:
+        "Mas velocidad, mejor organizacion y diferenciacion frente a tu competencia."
     },
     {
-      title: "Arquitectura cloud y serverless",
+      icon: "googlegemini",
+      title: "Asesoria en transformacion digital para PYMES",
+      lead: "Toma decisiones correctas antes de invertir de mas",
       summary:
-        "Diseno de plataformas modernas con microservicios, Lambda y APIs para crecer sin friccion."
+        "La inteligencia artificial no es una moda. Es un cambio que va a redefinir como operan los negocios hacia el 2030.",
+      bullets: [
+        "Que procesos deberias automatizar primero.",
+        "Donde realmente vale la pena usar IA.",
+        "Que herramientas necesitas y cuales no.",
+        "Como invertir sin desperdiciar dinero."
+      ],
+      outcome:
+        "Claridad, menor riesgo y una hoja de ruta realista para crecer.",
+      note:
+        "La diferencia de los proximos anios sera clara: empresas que se adaptan vs empresas que se quedan atras."
     }
   ],
   en: [
     {
-      title: "Automate with AI",
+      icon: "openai",
+      title: "Apply AI in your business",
+      lead: "Bring AI into operations without unnecessary complexity",
       summary:
-        "Design and implementation of AI assistants, smart workflows, and automations to reduce operational time."
+        "In 2026 the conversation is no longer only about using AI, but about having agents that work for your business. This is already accessible for SMEs.",
+      bullets: [
+        "An assistant that answers customers 24/7 on WhatsApp or the web.",
+        "Automation of quotations or frequent responses.",
+        "Automatic classification of customers or leads.",
+        "Report generation without manual intervention.",
+        "Smart alerts when something important happens in your operation."
+      ],
+      outcome:
+        "Less operational load, more speed, and better customer service.",
+      note:
+        "Typical SME investment: concrete solutions between $500 and $1500 with immediate impact."
     },
     {
-      title: "Migrate to cloud",
+      icon: "amazonaws",
+      title: "Migrate your solutions to modern technologies",
+      lead: "Move from operational disorder to systems that truly control your business",
       summary:
-        "Phased migration from on-premise systems to AWS with continuity, security, and performance as core goals."
+        "Many companies in Peru still operate with Excel, manual workflows, or systems that no longer scale. The problem is not Excel itself, but depending on it for everything.",
+      bullets: [
+        "Move from scattered files to an organized system.",
+        "Centralize sales, customers, and operations.",
+        "Access the business from anywhere.",
+        "Keep systems available 24/7 without expensive servers.",
+        "Reduce human errors and information loss."
+      ],
+      outcome:
+        "More order, more control, and less dependence on manual processes."
     },
     {
-      title: "Adopt AI across operations",
+      icon: "vercel",
+      title: "Get applications tailored to your business",
+      lead: "Make technology adapt to your company, not the other way around",
       summary:
-        "AI adoption strategy for teams and business processes with impact-driven use case prioritization."
+        "Your business is unique, but you are probably using generic tools. That is where efficiency gets lost.",
+      bullets: [
+        "Landing pages that convert visits into customers.",
+        "Sales, customer, or inventory management systems.",
+        "Dashboards with clear indicators for decision-making.",
+        "Internal platforms to organize teams and processes."
+      ],
+      outcome:
+        "More speed, better organization, and differentiation against competitors."
     },
     {
-      title: "Cloud and serverless architecture",
+      icon: "googlegemini",
+      title: "Digital transformation advisory for SMEs",
+      lead: "Make better decisions before overspending on technology",
       summary:
-        "Modern platform design with microservices, Lambda, and APIs to scale with lower operational friction."
+        "Artificial intelligence is not a trend. It is a shift that will redefine how businesses operate toward 2030.",
+      bullets: [
+        "Which processes should be automated first.",
+        "Where AI is actually worth using.",
+        "Which tools you need and which you do not.",
+        "How to invest without wasting money."
+      ],
+      outcome:
+        "Clarity, lower risk, and a realistic roadmap for growth.",
+      note:
+        "The difference in the coming years will be clear: companies that adapt versus companies that stay behind."
     }
   ]
+};
+
+export const sprintOfferByLocale: Record<Locale, SprintOffer> = {
+  es: {
+    title: "Digitaliza tu negocio en 30 dias",
+    intro:
+      "Hoy en 2026, las empresas que crecen no necesariamente son las mas grandes: son las que tienen procesos mas ordenados y automatizados.",
+    definition:
+      "En menos de 30 dias puedes pasar de trabajar con procesos manuales a tener un negocio mas organizado, automatizado y listo para crecer.",
+    includesTitle: "Que incluye",
+    audienceTitle: "Ideal si",
+    whyTitle: "Por que 30 dias",
+    outcomesTitle: "Resultados que puedes esperar",
+    examples: [
+      "Pasar de manejar ventas en Excel o WhatsApp a tener un sistema ordenado.",
+      "Automatizar respuestas a clientes sin depender de una persona todo el dia.",
+      "Tener reportes claros sin armarlos manualmente cada semana.",
+      "Centralizar toda tu informacion en un solo lugar."
+    ],
+    includes: [
+      "Automatizacion basica de procesos de ventas, atencion o reportes.",
+      "Implementacion de herramientas digitales adaptadas a tu negocio.",
+      "Organizacion de tu flujo de trabajo.",
+      "Integracion de IA en tareas clave sin complicaciones.",
+      "Entrega de una solucion funcional, no solo una idea."
+    ],
+    audience: [
+      "Tu negocio esta creciendo pero sientes desorden.",
+      "Pierdes tiempo en tareas repetitivas.",
+      "Dependes demasiado de Excel o procesos manuales.",
+      "No tienes claridad de tus datos o indicadores.",
+      "Quieres modernizarte sin gastar de mas."
+    ],
+    whyNow:
+      "El objetivo no es hacer un sistema perfecto. El objetivo es generar impacto rapido con soluciones iterativas que empiecen a dar valor desde el inicio.",
+    outcomes: [
+      "Ahorro de tiempo operativo.",
+      "Menos errores humanos.",
+      "Mejor atencion al cliente.",
+      "Mayor control del negocio.",
+      "Base lista para seguir creciendo."
+    ]
+  },
+  en: {
+    title: "Digitize your business in 30 days",
+    intro:
+      "In 2026, the companies that grow are not necessarily the biggest ones. They are the ones with more organized and automated processes.",
+    definition:
+      "In less than 30 days you can move from manual work to a business that is more organized, automated, and ready to scale.",
+    includesTitle: "What is included",
+    audienceTitle: "Ideal if",
+    whyTitle: "Why 30 days",
+    outcomesTitle: "Expected results",
+    examples: [
+      "Move from Excel or WhatsApp-based sales handling to an organized system.",
+      "Automate customer responses without depending on one person all day.",
+      "Get clear reports without building them manually every week.",
+      "Centralize all your information in one place."
+    ],
+    includes: [
+      "Basic automation for sales, support, or reporting processes.",
+      "Implementation of digital tools adapted to your business.",
+      "Organization of your workflow.",
+      "AI integration in key tasks without unnecessary complexity.",
+      "Delivery of a functional solution, not only an idea."
+    ],
+    audience: [
+      "Your business is growing but operations feel messy.",
+      "You lose time on repetitive tasks.",
+      "You depend too much on Excel or manual processes.",
+      "You do not have clear data or indicators.",
+      "You want modernization without overspending."
+    ],
+    whyNow:
+      "The goal is not to build a perfect system first. The goal is to create fast impact with iterative solutions that deliver value from the start.",
+    outcomes: [
+      "Operational time savings.",
+      "Fewer human errors.",
+      "Better customer service.",
+      "More business control.",
+      "A stronger base for future growth."
+    ]
+  }
 };
 
 export const insightsByLocale: Record<Locale, MarketInsight[]> = {

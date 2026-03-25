@@ -218,6 +218,96 @@ body {
   box-shadow: 0 22px 38px -24px rgba(34, 211, 238, 0.45);
 }
 
+.service-card {
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.94)),
+    radial-gradient(circle at top right, rgba(34, 211, 238, 0.12), transparent 36%);
+}
+
+.service-card__top {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.service-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.18), rgba(59, 130, 246, 0.18));
+  border: 1px solid rgba(103, 232, 249, 0.2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.service-card__lead {
+  color: #67e8f9;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.service-bullet {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.7rem;
+  align-items: start;
+  color: #cbd5e1;
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.service-bullet--soft {
+  color: #e2e8f0;
+}
+
+.service-bullet__dot {
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: 0.42rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #67e8f9, #38bdf8);
+  box-shadow: 0 0 14px rgba(34, 211, 238, 0.4);
+}
+
+.service-outcome {
+  border-radius: 1rem;
+  border: 1px solid rgba(34, 211, 238, 0.16);
+  background: linear-gradient(90deg, rgba(6, 78, 59, 0.35), rgba(6, 78, 59, 0.06));
+  color: #dcfce7;
+  padding: 0.9rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.sprint-panel {
+  background:
+    radial-gradient(circle at top left, rgba(56, 189, 248, 0.12), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.12), transparent 32%),
+    linear-gradient(155deg, rgba(15, 23, 42, 0.9), rgba(2, 6, 23, 0.94));
+}
+
+.sprint-box,
+.sprint-why,
+.sprint-results {
+  border-radius: 1.4rem;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  background: rgba(2, 6, 23, 0.58);
+  padding: 1.2rem;
+}
+
+.sprint-box__title {
+  color: #f8fafc;
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
