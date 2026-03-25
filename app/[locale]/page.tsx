@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import HeroPortrait from "@/components/hero-portrait";
@@ -169,13 +168,15 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
             <div className="hero-media">
               <div className="hero-media__frame">
-                <Image
-                  src="/portada.png"
-                  alt="Portada de servicios de transformacion digital"
-                  width={1376}
-                  height={768}
-                  priority
+                <video
                   className="hero-media__image"
+                  src="/portada.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  preload="auto"
+                  aria-label="Portada en video de servicios de transformacion digital"
                 />
               </div>
             </div>
