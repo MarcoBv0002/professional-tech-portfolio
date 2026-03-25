@@ -572,23 +572,18 @@ export const credentials: Credential[] = [
 ];
 
 export const techStack: TechItem[] = [
-  { name: "C#", logo: "dotnet", category: "backend" },
-  { name: ".NET", logo: "dotnet", category: "backend" },
+  { name: "C#", logo: "c-sharp", category: "backend" },
   { name: "Python", logo: "python", category: "backend" },
   { name: "TypeScript", logo: "typescript", category: "backend" },
   { name: "JavaScript", logo: "javascript", category: "backend" },
-  { name: "Node.js", logo: "nodedotjs", category: "backend" },
-  { name: "SQL Server", logo: "microsoftsqlserver", category: "database" },
+  { name: "Node.js", logo: "node", category: "backend" },
+  { name: "SQL Server", logo: "sql-server", category: "database" },
   { name: "PostgreSQL", logo: "postgresql", category: "database" },
   { name: "MySQL", logo: "mysql", category: "database" },
-  { name: "DynamoDB", logo: "amazondynamodb", category: "database" },
+  { name: "DynamoDB", logo: "aws-dynamodb", category: "database" },
   { name: "AWS", logo: "amazonaws", category: "cloud" },
-  { name: "AWS Lambda", logo: "awslambda", category: "cloud" },
-  { name: "API Gateway", logo: "amazonapigateway", category: "cloud" },
-  { name: "Amazon RDS", logo: "amazonrds", category: "cloud" },
-  { name: "Amazon S3", logo: "amazons3", category: "cloud" },
-  { name: "AWS Connect", logo: "amazonconnect", category: "cloud" },
-  { name: "OpenShift", logo: "redhatopenshift", category: "devops" },
-  { name: "Jenkins", logo: "jenkins", category: "devops" },
-  { name: "Blazor", logo: "blazor", category: "frontend" }
+  { name: "AWS Lambda", logo: "aws-lambda", category: "cloud" },
+  { name: "Amazon RDS", logo: "aws-rds", category: "cloud" },
+  { name: "Amazon S3", logo: "aws-s3", category: "cloud" },
+  { name: "Jenkins", logo: "jenkins", category: "devops" }
 ];
