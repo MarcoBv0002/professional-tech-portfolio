@@ -214,27 +214,18 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
         <section id="services" className="reveal delay-1 mb-12">
           <h2 className="section-title">{t.sections.services}</h2>
-          <div className="grid gap-5 md:grid-cols-2">
-            {services.map((service) => (
-              <article key={service.title} className="service-card glass-panel rounded-3xl p-6 card-rise-dark">
-                <div className="service-card__media">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="service-card__media-image"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="service-card__top">
-                  <div className="service-card__icon">
-                    <LogoImage
-                      logo={service.icon}
-                      alt={service.title}
-                      width={22}
-                      height={22}
-                      color="67e8f9"
-                    />
-                  </div>
+            <div className="grid gap-5 md:grid-cols-2">
+              {services.map((service) => (
+                <article key={service.title} className="service-card glass-panel rounded-3xl p-6 card-rise-dark">
+                  <div className="service-card__top">
+                    <div className="service-card__icon">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="service-card__icon-image"
+                        loading="lazy"
+                      />
+                    </div>
                   <div>
                     <p className="service-card__lead">{service.lead}</p>
                     <h3 className="mt-2 text-xl font-semibold text-slate-100">{service.title}</h3>
