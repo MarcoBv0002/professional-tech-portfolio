@@ -309,21 +309,20 @@ body {
 }
 
 .reveal {
-  opacity: 0;
-  transform: translateY(18px);
-  animation: reveal-up 640ms ease forwards;
+  opacity: 1;
+  transform: none;
 }
 
 .delay-1 {
-  animation-delay: 90ms;
+  animation-delay: 0ms;
 }
 
 .delay-2 {
-  animation-delay: 170ms;
+  animation-delay: 0ms;
 }
 
 .delay-3 {
-  animation-delay: 250ms;
+  animation-delay: 0ms;
 }
 
 .tag-neon {
@@ -432,13 +431,6 @@ body {
   70%,
   100% {
     transform: translateX(130%);
-  }
-}
-
-@keyframes reveal-up {
-  to {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
