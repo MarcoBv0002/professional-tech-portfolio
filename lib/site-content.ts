@@ -154,7 +154,7 @@ export const dictionaries: Record<Locale, Dictionary> = {
       secondaryCredentials: "Credenciales secundarias"
     },
     aboutText:
-      "Soy arquitecto de soluciones especializado en cloud, automatizacion e integracion de sistemas, con mas de 7 anios de experiencia ayudando a empresas a mejorar su operacion mediante tecnologia.\n\nHe trabajado en proyectos de alto impacto en sectores como el financiero y servicios, liderando implementaciones que van desde automatizacion con IA hasta migraciones hacia la nube y modernizacion de sistemas legacy.\n\nMi enfoque esta en entender el negocio antes que la tecnologia, identificar oportunidades de mejora y diseniar soluciones que realmente generen eficiencia, control y crecimiento.\n\nTrabajo con una premisa clara: la tecnologia debe simplificar la operacion, no complicarla.",
+      "Soy arquitecto de soluciones especializado en cloud, automatizacion e integracion de sistemas, con mas de 7 años de experiencia ayudando a empresas a mejorar su operacion mediante tecnologia.\n\nHe trabajado en proyectos de alto impacto en sectores como el financiero y servicios, liderando implementaciones que van desde automatizacion con IA hasta migraciones hacia la nube y modernizacion de sistemas legacy.\n\nMi enfoque esta en entender el negocio antes que la tecnologia, identificar oportunidades de mejora y diseniar soluciones que realmente generen eficiencia, control y crecimiento.\n\nTrabajo con una premisa clara: la tecnologia debe simplificar la operacion, no complicarla.",
     contactText:
       "Conversemos sobre como llevar tu operacion hacia IA aplicada, cloud escalable y automatizacion de punta a punta.",
     calendly: "https://calendly.com/your-handle/30min"
@@ -274,7 +274,7 @@ export const servicesByLocale: Record<Locale, ServiceOffering[]> = {
       outcome:
         "Claridad, menor riesgo y una hoja de ruta realista para crecer.",
       note:
-        "La diferencia de los proximos anios sera clara: empresas que se adaptan vs empresas que se quedan atras."
+        "La diferencia de los proximos años sera clara: empresas que se adaptan vs empresas que se quedan atras."
     }
   ],
   en: [
