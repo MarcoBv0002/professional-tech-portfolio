@@ -269,6 +269,7 @@ body {
   width: 100%;
   height: auto;
   object-fit: cover;
+  display: block;
 }
 
 .service-card__top {
@@ -373,6 +374,113 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 767px) {
+  .locale-switch {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .locale-switch a {
+    min-width: 3.25rem;
+    text-align: center;
+  }
+
+  .hero-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-media {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero-media__frame {
+    border-radius: 1.35rem;
+  }
+
+  .hero-media__image {
+    aspect-ratio: 16 / 10;
+    max-height: 15rem;
+  }
+
+  .about-panel__portrait .photo-wrap {
+    max-width: 13rem !important;
+  }
+
+  .service-card {
+    padding: 1.15rem;
+    border-radius: 1.4rem;
+  }
+
+  .service-card__top {
+    gap: 0.85rem;
+  }
+
+  .service-card__icon {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.9rem;
+  }
+
+  .service-card__lead {
+    font-size: 0.66rem;
+    letter-spacing: 0.11em;
+  }
+
+  .service-bullet {
+    font-size: 0.88rem;
+  }
+
+  .service-outcome {
+    font-size: 0.9rem;
+    padding: 0.8rem 0.9rem;
+  }
+
+  .sprint-panel,
+  .about-panel {
+    border-radius: 1.45rem;
+  }
+
+  .sprint-box,
+  .sprint-why,
+  .sprint-results {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .tech-marquee {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 0.35rem;
+    mask-image: none;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .tech-marquee::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tech-track {
+    animation: none;
+    gap: 0.55rem;
+    padding-right: 1rem;
+  }
+
+  .tech-card {
+    flex: 0 0 auto;
+    font-size: 0.76rem;
+    padding: 0.5rem 0.7rem;
+  }
 }
 
 .reveal {

@@ -118,11 +118,11 @@ export default async function LocalePage({ params }: LocalePageProps) {
       <div className="bg-glow bg-glow-cyan" />
       <div className="bg-glow bg-glow-blue" />
 
-      <div className="relative z-10 mx-auto max-w-6xl px-6 pb-20 pt-8 md:px-10">
+      <div className="relative z-10 mx-auto max-w-6xl px-4 pb-20 pt-6 sm:px-6 md:px-10">
         <header className="glass-panel reveal mb-10 rounded-3xl p-6 md:p-10">
           <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
             <span className="neon-pill">{t.hero.kicker}</span>
-            <div className="inline-flex rounded-full border border-white/20 bg-[#070a15] p-1 text-sm">
+            <div className="locale-switch inline-flex rounded-full border border-white/20 bg-[#070a15] p-1 text-sm">
               {locales.map((item) => (
                 <Link
                   key={item}
@@ -156,7 +156,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
                 {t.hero.subtitle}
               </p>
 
-              <div className="mt-7 flex flex-wrap gap-3">
+              <div className="hero-actions mt-7 flex flex-wrap gap-3">
                 <a href={t.calendly} target="_blank" rel="noreferrer" className="btn-neon">
                   {t.hero.cta}
                 </a>
@@ -214,7 +214,7 @@ export default async function LocalePage({ params }: LocalePageProps) {
 
         <section id="services" className="reveal delay-1 mb-12">
           <h2 className="section-title">{t.sections.services}</h2>
-            <div className="grid gap-5 md:grid-cols-2">
+          <div className="services-grid grid gap-5 md:grid-cols-2">
               {services.map((service) => (
                 <article key={service.title} className="service-card glass-panel rounded-3xl p-6 card-rise-dark">
                   <div className="service-card__top">
